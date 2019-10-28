@@ -1,8 +1,8 @@
 class CreateListings < ActiveRecord::Migration[5.2]
   def change
     create_table :listings do |t|
-      t.string :title
-      t.float :price
+      t.string :title null:false
+      t.float :price null:false
 
       t.timestamps
     end
