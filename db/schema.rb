@@ -16,53 +16,53 @@ ActiveRecord::Schema.define(version: 2019_10_28_033811) do
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.text "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "condition_id"
-    t.bigint "clan_id"
-    t.bigint "listing_id"
+    t.bigint "condition_id", null: false
+    t.bigint "clan_id", null: false
+    t.bigint "listing_id", null: false
     t.index ["clan_id"], name: "index_cards_on_clan_id"
     t.index ["condition_id"], name: "index_cards_on_condition_id"
     t.index ["listing_id"], name: "index_cards_on_listing_id"
   end
 
   create_table "clans", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "conditions", force: :cascade do |t|
-    t.string "type"
+    t.string "type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
+    t.text "description", null: false
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "title"
-    t.float "price"
+    t.string "title", null: false
+    t.float "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "card_id"
-    t.bigint "user_id"
+    t.bigint "card_id", null: false
+    t.bigint "user_id", null: false
     t.index ["card_id"], name: "index_orders_on_card_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password"
+    t.string "email", null: false
+    t.string "password", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
