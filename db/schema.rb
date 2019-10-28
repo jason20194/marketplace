@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_28_033107) do
+ActiveRecord::Schema.define(version: 2019_10_28_033559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.string "name"
+    t.text "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "condition_id"
+    t.bigint "clan_id"
+    t.bigint "listing_id"
+    t.index ["clan_id"], name: "index_cards_on_clan_id"
+    t.index ["condition_id"], name: "index_cards_on_condition_id"
+    t.index ["listing_id"], name: "index_cards_on_listing_id"
+  end
 
   create_table "clans", force: :cascade do |t|
     t.string "name"
@@ -45,5 +58,8 @@ ActiveRecord::Schema.define(version: 2019_10_28_033107) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "cards", "clans"
+  add_foreign_key "cards", "conditions"
+  add_foreign_key "cards", "listings"
   add_foreign_key "listings", "users"
 end
