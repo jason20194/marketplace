@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'market/index'
+  
+  devise_for :users
+  get 'market/index',as:'root'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
