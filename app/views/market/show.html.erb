@@ -21,10 +21,10 @@
 </p>
 
 <p>
-      <%= image_tag( @card.image_url, {height:300, width:200} ) %>
+      <%= image_tag(@card.picture,size:'200x200') if @card.picture.attached? %>
 </p>
 
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Back', market_index_path %>
 

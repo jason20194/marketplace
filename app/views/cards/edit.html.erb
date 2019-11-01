@@ -1,4 +1,4 @@
-<%= form_with(model:@card) do |form| %>
+<%= form_with model:@card do |form| %>
   
 
   <div class="field">
@@ -24,6 +24,11 @@
   <div class="field">
     <%= form.label :listing_id %>
     <%= form.select :listing_id, Listing.all.collect { |u| [u.title, u.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, accept:'image/png,image/gif,image/jpeg,image/jpg' %>
   </div>
 
   <div class="actions">

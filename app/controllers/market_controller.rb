@@ -36,6 +36,17 @@ class MarketController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @recipe.update(card_params)
+        format.html { redirect_to @card, notice: 'card was successfully updated.' }
+        format.json { render :show, status: :ok, location: @card }
+      else
+        format.html { render :edit }
+        format.json { render json: @card.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   
 
   private
@@ -45,7 +56,7 @@ class MarketController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:name, :image_url, :condition_id, :clan_id, :listing_id)
+    params.require(:card).permit(:name, :image_url, :condition_id, :clan_id, :listing_id,:picture)
   end
 
 end
