@@ -1,0 +1,9 @@
+<!-- <h1>This is the listing page </h1>
+ ? card.clan_id.name : ""
+ <td><%= image_tag( card.image_url , size: "200x300") %></td>
+<% @cards.each do |card| %>
+<h3>Name: <%= card.name  %></h3>
+    <h3>Image: <%= image_tag(card.image_url,size:'200x300') %></h3>
+    <h3>Clan: <%= Clan.find(card.clan_id).name if card.clan_id != nil  %></h3>
+    
+<% end %>  -->

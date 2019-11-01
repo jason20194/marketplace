@@ -15,5 +15,39 @@
  */
 
  h1 {
-     font-family: cursive;
+    font-family: 'Space Mono', monospace;
  }
+
+ p {
+    font-family: 'Space Mono', monospace;
+ }
+
+ .navbar {
+   
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+
+}
+
+.navbar li {
+    text-align: center;
+    display: inline;
+    padding:0 20px;
+    list-style-type: none;
+    align-self: flex-end;
+    font-family: 'Space Mono', monospace;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: midnightblue;
+}
+   
+ul li a:hover, ul li a:focus {
+    color: white;
+}

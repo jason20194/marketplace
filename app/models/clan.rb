@@ -1,3 +1,3 @@
 class Clan < ApplicationRecord
-    belongs_to :cards
+    belongs_to :card, required: false
 end

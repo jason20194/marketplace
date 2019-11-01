@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.name %>
+</p>
+
+<p>
+  <strong>Clan:</strong>
+  <%= Clan.find(@card.clan_id).name %>
+</p>
+
+<p>
+  <strong>Card condition:</strong>
+  <%= Condition.find(@card.condition_id).card_type %>
+</p>
+
+<p>
+  <strong>Listing title:</strong>
+  <%= Listing.find(@card.listing_id).title %>
+</p>
+
+<p>
+      <%= image_tag( @card.image_url, {height:300, width:200} ) %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
+
