@@ -68,3 +68,4 @@ gem "simple_form", "~> 5.0"
 gem 'ransack'
 
 gem "aws-sdk-s3", "~> 1.53"
+gem 'activemerchant' 

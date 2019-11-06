@@ -60,4 +60,13 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #Paypal API authentication
+  # config.after_initialize do
+  #   ActiveMerchant::Billing::Base.mode = :test
+  #   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+  #     login: sb-emoup505751@business.example.com,
+  #     password: "4BP7W7H7TWF7F3UR",
+  #     signature: "Ab8p078xzvwme4VBc9Et5dkjdCvwAKCjDDh7rWyVWJ0SBfFdPhfd5TSk"
+  #   )
+  # end
 end

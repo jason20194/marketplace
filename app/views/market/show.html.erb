@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1> Card Listing</h1>
+
 <p>
   <strong>Name:</strong>
   <%= @card.name %>
@@ -21,10 +23,17 @@
 </p>
 
 <p>
-      <%= image_tag(@card.picture,size:'200x200') if @card.picture.attached? %>
+  <%= image_tag(@card.picture,size:'200x300') if @card.picture.attached? %>
 </p>
 
+<p>
+  <strong>Price:</strong>
+  <%= Listing.find(@card.listing_id).price %>
+</p>
 
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', market_index_path %>
+<button><%= link_to 'Sell', market_sold_path %></button>
+
+<%= link_to 'Edit', edit_card_path(@card) %> 
+<%= link_to 'Back', listings_index_path %>
+
 

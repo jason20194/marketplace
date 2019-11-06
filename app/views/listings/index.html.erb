@@ -1,0 +1,51 @@
+<nav class="navbar">
+    <ul>
+        <li><a href="./orders/index">My orders</a></li>
+        <li><a href="./market/buyorsell">Buy/Sell</a></li>
+        <li><a href="./listings/index">Make a Listing</a></li>
+        <li><a href="./market/sold">Sold Listings</a></li>
+        <li><a href="./market/about">About Us</a></li>
+        <li><a href="./market/contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Card Listings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Clan</th>
+      <th>Condition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.name %></td>
+        <td><%= Clan.find(card.clan_id).name %></td>
+        <td><%= Condition.find(card.condition_id).card_type %></td>
+        <td><%= card.image_url %></td>
+        
+        <% if card.image_url %>
+        
+        <% end %> 
+        <td><%= link_to 'Show', market_show_path(card) %></td>   
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button><%= link_to 'New Card Listing', market_card_new_path %></button>
+
+
+
+

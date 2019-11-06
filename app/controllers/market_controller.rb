@@ -3,6 +3,18 @@ class MarketController < ApplicationController
   def homepage
   end
 
+  def about
+  end
+
+  def buyorsell
+  end
+
+  def sold 
+  end
+
+  def contact
+  end
+
   def index
     @cards = Card.all
   end
