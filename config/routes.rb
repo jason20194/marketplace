@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'market/card/new', to: 'market#new'
   post 'market/card', to: 'market#create'
   get 'market/show/:id', to:'market#show', as:'market_show'
+
+  get 'market/sell_card', to: 'market#sell_card'
   
   get 'market/about', to: 'market#about'
 

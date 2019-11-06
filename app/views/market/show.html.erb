@@ -30,10 +30,14 @@
   <strong>Price:</strong>
   <%= Listing.find(@card.listing_id).price %>
 </p>
-
-<button><%= link_to 'Sell', market_sold_path %></button>
-
+<% if @card.listing.user == current_user  %>
+<button><%= link_to 'Sell', market_sell_card_path(:id => @card.id) %></button>
 <%= link_to 'Edit', edit_card_path(@card) %> 
+<% end %>
+<% if @card.listing.user != current_user %>
+<button><%= link_to 'Buy', market_buyorsell_path %></button>
+<% end %>
 <%= link_to 'Back', listings_index_path %>
+
 
 

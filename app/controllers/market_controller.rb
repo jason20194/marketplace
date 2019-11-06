@@ -1,5 +1,5 @@
 class MarketController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :update, :destroy]
+  before_action :set_card, only: [:show, :edit, :update, :destroy, :sell_card]
   def homepage
   end
 
@@ -8,8 +8,22 @@ class MarketController < ApplicationController
 
   def buyorsell
   end
+  
+  def sell_card
+    @card.sold = true
+    respond_to do |format|
+      if @card.save
+        format.html { redirect_to market_sold_path, notice: 'card was successfully updated.' }
+        format.json { render :show, status: :ok, location: @card }
+      else
+        format.html { render :edit }
+        format.json { render json: @card.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   def sold 
+    @cards = Card.all
   end
 
   def contact
@@ -68,7 +82,7 @@ class MarketController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:name, :image_url, :condition_id, :clan_id, :listing_id,:picture)
+    params.require(:card).permit(:name, :image_url, :condition_id, :clan_id, :listing_id,:picture, :sold)
   end
 
 end

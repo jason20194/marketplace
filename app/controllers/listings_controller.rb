@@ -11,13 +11,13 @@ class ListingsController < ApplicationController
         card_params = params.require(:card).permit(:name, :image_url, :clan_id, :condition_id, :listing_id, :picture )
         @card = Card.find(params[:id])
         @card.update(card_params)
-        redirect_to market_index_path
+        redirect_to listings_index_path
     end
 
     def destroy
         @card = Card.find(params[:id])
         @card.destroy
-        redirect_to market_index_path
+        redirect_to listings_index_path
     end
     
     def show
@@ -26,7 +26,7 @@ class ListingsController < ApplicationController
     private
 
     def card_params
-        card_params = params.require(:card).permit(:name, :image_url, :clan_id, :condition_id, :listing_id, :picture )
+        card_params = params.require(:card).permit(:name, :image_url, :clan_id, :condition_id, :listing_id, :picture, :sold )
     end 
 
 end
