@@ -34,9 +34,11 @@
         <% if card.image_url %>
         
         <% end %> 
-        <td><%= link_to 'Show', market_show_path(card) %></td>   
-        <td><%= link_to 'Edit', edit_card_path(card) %></td>
-        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', market_show_path(card) %></td> 
+        <% if card.listing.user == current_user  %>
+          <td><%= link_to 'Edit', edit_card_path(card) %></td>
+          <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
