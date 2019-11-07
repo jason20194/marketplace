@@ -35,6 +35,27 @@ class MarketController < ApplicationController
 
   def show
     @card = Card.find(params[:id])
+
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      customer_email: current_user.email,
+      line_items: [{
+          name: @card.listing.title,
+          amount: (@card.listing.price * 100).to_i,
+          currency: 'aud',
+          quantity: 1,
+      }],
+      payment_intent_data: {
+          metadata: {
+              user_id: current_user.id,
+              listing_id: @card.listing.id
+          }
+      },
+      success_url: "#{root_url}payments/success?userId=#{current_user.id}&listingId=#{@card.listing.id}",
+      cancel_url: "#{root_url}listings"
+  )
+
+  @session_id = session.id
   end
 
   def new

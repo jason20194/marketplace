@@ -69,3 +69,4 @@ gem 'ransack'
 
 gem "aws-sdk-s3", "~> 1.53"
 gem 'activemerchant' 
+gem "stripe", "~> 5.8"

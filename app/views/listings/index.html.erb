@@ -1,15 +1,6 @@
-<nav class="navbar">
-    <ul>
-        <li><a href="./orders/index">My orders</a></li>
-        <li><a href="./market/buyorsell">Buy/Sell</a></li>
-        <li><a href="./listings/index">Make a Listing</a></li>
-        <li><a href="./market/sold">Sold Listings</a></li>
-        <li><a href="./market/about">About Us</a></li>
-        <li><a href="./market/contact">Contact Us</a></li>
-    </ul>
-</nav>
-
 <p id="notice"><%= notice %></p>
+
+<%= render 'navbar'%>
 
 <h1>Card Listings</h1>
 
@@ -34,10 +25,10 @@
         <% if card.image_url %>
         
         <% end %> 
-        <td><%= link_to 'Show', market_show_path(card) %></td> 
+        <td><%= link_to 'Show', market_show_path(card), class:"show" %></td> 
         <% if card.listing.user == current_user  %>
-          <td><%= link_to 'Edit', edit_card_path(card) %></td>
-          <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_card_path(card), class:"show" %></td>
+          <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }, class:"show" %></td>
         <% end %>
       </tr>
     <% end %>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <title>Vanguard Marketplace</title>
     <%= csrf_meta_tags %>
 
@@ -47,12 +48,11 @@
                 </div>
               </div>
             <% else %>
-
             <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
             <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-warning"%>
+            
 
             <% end %>
-
             </div>
           </div>
         </div>

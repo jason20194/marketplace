@@ -14,15 +14,13 @@ Rails.application.routes.draw do
   
   get 'market/about', to: 'market#about'
 
-  get 'market/buyorsell', to: 'market#buyorsell'
-
   get 'market/sold', to: 'market#sold'
 
   get 'market/contact', to: 'market#contact'
 
-  get 'orders/index', to: 'orders#index'
-
   get 'listings/index', to: 'listings#index'
+
+  get '/payments/success', to: 'payments#success'
 
   resources :cards
 

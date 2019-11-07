@@ -35,9 +35,25 @@
 <%= link_to 'Edit', edit_card_path(@card) %> 
 <% end %>
 <% if @card.listing.user != current_user %>
-<button><%= link_to 'Buy', market_buyorsell_path %></button>
+<button data-stripe="payment" >Buy Now <%= number_to_currency(@card.listing.price) %></button>
 <% end %>
 <%= link_to 'Back', listings_index_path %>
 
 
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  document
+    .querySelector("[data-stripe='payment']")
+    .addEventListener("click", () => {
+      const stripe = Stripe(
+        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+      );
+
+      stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+      });
+    });
+</script>
 
