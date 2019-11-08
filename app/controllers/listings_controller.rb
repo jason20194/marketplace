@@ -2,6 +2,21 @@ class ListingsController < ApplicationController
     def index
         @cards = Card.all
     end
+
+    def list
+        @listing = Listing.new
+    end
+    
+    def new
+        @listing = Listing.new
+    end
+
+    def create
+        @listing = Listing.new(listing_params)
+        @listing.user_id = current_user.id
+        @listing.save
+        redirect_to market_card_new_path
+    end
     
     def edit
         @card = Card.find(params[:id])
@@ -50,5 +65,8 @@ class ListingsController < ApplicationController
     def card_params
         card_params = params.require(:card).permit(:name, :image_url, :clan_id, :condition_id, :listing_id, :picture, :sold )
     end 
+    def listing_params
+        listing_params = params.require(:listing).permit(:title, :price, :user_id )
+    end
 
 end

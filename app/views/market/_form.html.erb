@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :listing_id %>
-    <%= form.select :listing_id, Listing.all.collect { |u| [u.title, u.id] } %>
+    <%= form.select :listing_id, Listing.where(user_id: current_user.id).collect { |u| [u.title, u.id] } %>
   </div>
 
   <div class="field">

@@ -22,6 +22,10 @@ Rails.application.routes.draw do
 
   get '/payments/success', to: 'payments#success'
 
+  get 'listings/new', to: 'listings#new'
+
+  post 'listings/new', to: 'listings#create'
+
   resources :cards
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
