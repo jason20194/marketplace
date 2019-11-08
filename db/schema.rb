@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_051457) do
+ActiveRecord::Schema.define(version: 2019_11_08_085707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_051457) do
     t.bigint "clan_id"
     t.bigint "listing_id"
     t.boolean "sold", default: false
+    t.float "price"
     t.index ["clan_id"], name: "index_cards_on_clan_id"
     t.index ["condition_id"], name: "index_cards_on_condition_id"
     t.index ["listing_id"], name: "index_cards_on_listing_id"
