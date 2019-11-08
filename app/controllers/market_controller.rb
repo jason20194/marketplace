@@ -53,9 +53,9 @@ class MarketController < ApplicationController
       },
       success_url: "#{root_url}payments/success?userId=#{current_user.id}&listingId=#{@card.listing.id}",
       cancel_url: "#{root_url}listings"
-  )
+    )
 
-  @session_id = session.id
+    @session_id = session.id
   end
 
   def new
@@ -70,7 +70,6 @@ class MarketController < ApplicationController
   # POST /cards.json
   def create
     @card = Card.new(card_params)
-
     @card.save
     redirect_to market_show_path(@card)
   end

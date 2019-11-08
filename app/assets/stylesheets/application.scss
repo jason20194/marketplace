@@ -10,14 +10,16 @@
 .navbar li {
     text-align: center;
     display: inline;
-    padding:0 20px;
+    padding:20px;
     list-style-type: none;
     align-self: flex-end;
 
 }
 
 body {
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
     background-image: url(./2225731-vanguard-wallpaper.jpg);
+    
 }
 
 
@@ -70,4 +72,5 @@ td {
 .show {
     color: white;
 }
+
 
