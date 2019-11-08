@@ -23,7 +23,7 @@ class MarketController < ApplicationController
   end
 
   def sold 
-    @cards = Card.all
+    @cards = Card.where("sold = true")
   end
 
   def contact
@@ -71,7 +71,7 @@ class MarketController < ApplicationController
   def create
     @card = Card.new(card_params)
     @card.save
-    redirect_to market_show_path(@card)
+    redirect_to listings_index_path(@card)
   end
     
   def destroy

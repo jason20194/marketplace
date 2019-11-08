@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
     def index
-        @cards = Card.all
+        @cards = Card.where("sold = false")
     end
 
     def list
