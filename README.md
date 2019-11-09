@@ -51,6 +51,27 @@ The purpose of this Marketplace application is to create a two sided marketplace
 
 ## Screenshots
 
+- Signup page
+![Signup](app/pictures/Signups.png)
+- Login page
+![Login](app/pictures/Login.png)
+- Edit User page
+![EditUser](app/pictures/EditUser.png)
+- Homepage
+![Homepage](app/pictures/Homepage.png)
+- Listing page
+![Listing](app/pictures/Listings.png)
+- Show page
+![Show](app/pictures/Show.png)
+- Buy page
+![Buy](app/pictures/Buy.png)
+- Sold page
+![Sold](app/pictures/Sold.png)
+- About Us page
+![About](app/pictures/About.png)
+- Contact Us page
+![Contact](app/pictures/Contact.png)
+
 ## Target Audience
 The main audience of this web application are mostly Vanguard players, or card sellers who are using Vanguard as a way of doing their business. It also targets new players who are just getting into the game and are looking for some cards that they need.
 
