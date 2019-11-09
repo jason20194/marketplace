@@ -501,6 +501,8 @@ create_table "conditions", force: :cascade do |t|
 
 I used Trelloboard as a way to plan out and allocate tasks and track tasks in my project. Every two days, I would update Trello and check off tasks that are complete, pile up new tasks that need to be done, keep track of what tasks are in progress and also what still hasnt been done. Here is a screenshot of my TrelloBoard:
 
+![Trello](app/pictures/Trello.png)
+
 
 
 
