@@ -246,6 +246,27 @@ The main audience of this web application are mostly Vanguard players, or card s
 
 # R13 Wireframes for the application
 
+- Login and signup pages wireframe
+![Login](app/pictures/LoginWF.png)
+
+- Homepage wireframe
+![Homepage](app/pictures/HomepageWF.png)
+
+- Listings page wireframe
+![Listing](app/pictures/listingWF.png)
+
+- Sold listings page wireframe
+![Sold](app/pictures/SoldWF.png)
+
+- Show listings page wireframe
+![Show](app/pictures/ShowWF.png)
+
+- About Us page wireframe
+![About](app/pictures/aboutWF.png)
+
+- Contact Us page wireframe
+![Contact](app/pictures/contactWF.png)
+
 # R14 Entity Relationship Diagram for the application
 
 ![ERD](app/pictures/ERD.png)
