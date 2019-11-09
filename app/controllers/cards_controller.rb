@@ -5,6 +5,11 @@ class CardsController < ApplicationController
     
     def edit
         @card = Card.find(params[:id])
+        unless current_user == @card.listing.user
+            redirect_to listings_index_path, notice: "You cannot edit this listing" and return
+        
+    end
+
     end
 
     def update
