@@ -47,12 +47,33 @@ The purpose of this Marketplace application is to create a two sided marketplace
 
 ## Sitemap
 
+![Sitemap](app/pictures/Sitemap.png)
+
 ## Screenshots
 
 ## Target Audience
 The main audience of this web application are mostly Vanguard players, or card sellers who are using Vanguard as a way of doing their business. It also targets new players who are just getting into the game and are looking for some cards that they need.
 
+## Tech Stack
+
+- Ruby
+
+- Ruby on Rails
+
+- Bootstrap
+
+- Heroku
+
+- Stripe API
+
+- Postgres
+
+- Rails Console
+
+- AWS S3
+
 # R12 User stories
+
 <table style="width:100%">
     <tr>
       <th>User Stories</th>
@@ -205,6 +226,8 @@ The main audience of this web application are mostly Vanguard players, or card s
 # R13 Wireframes for the application
 
 # R14 Entity Relationship Diagram for the application
+
+![ERD](app/pictures/ERD.png)
 
 # R15 Explain the different high-level components (abstractions) in your application
 
