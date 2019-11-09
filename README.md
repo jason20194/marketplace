@@ -253,7 +253,7 @@ The main audience of this web application are mostly Vanguard players, or card s
 ![Homepage](app/pictures/HomepageWF.png)
 
 - Listings page wireframe
-![Listing](app/pictures/listingWF.png)
+![Listing](app/pictures/ListingWF.png)
 
 - Sold listings page wireframe
 ![Sold](app/pictures/SoldWF.png)
