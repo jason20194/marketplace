@@ -262,10 +262,10 @@ The main audience of this web application are mostly Vanguard players, or card s
 ![Show](app/pictures/ShowWF.png)
 
 - About Us page wireframe
-![About](app/pictures/aboutWF.png)
+![About](app/pictures/AboutWF.png)
 
 - Contact Us page wireframe
-![Contact](app/pictures/contactWF.png)
+![Contact](app/pictures/ContactWF.png)
 
 # R14 Entity Relationship Diagram for the application
 
