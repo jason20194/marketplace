@@ -503,6 +503,16 @@ I used Trelloboard as a way to plan out and allocate tasks and track tasks in my
 
 ![Trello](app/pictures/Trello.png)
 
+## Software Implementation plan
+
+|                    Task                    | Duration | Deadline   | Priority |
+| :----------------------------------------: | -------- | ---------- | -------- |
+|                 Design ERD                 | 2 hours   | 2019-10-28 | High     |
+|             Make Relationships between models             | 1 hour   | 2019-10-28 | High     |
+| Devise, migrate Devise to database | 60 mins   | 2019-11-02 | Medium   |
+|        Postgresql         | 120mins  | 2019-11-03 | High     |
+|  rails c to test data manipulation  | 240 mins  | 2019-10-28 | High      |
+
 
 
 
