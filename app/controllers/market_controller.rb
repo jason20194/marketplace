@@ -5,9 +5,6 @@ class MarketController < ApplicationController
 
   def about
   end
-
-  def buyorsell
-  end
   
   def sell_card
     @card.sold = true
